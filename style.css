@@ -1,0 +1,133 @@
+:root {
+    /*button select color*/
+    --strongCyan: hsl(172, 67%, 45%);
+    /*% button background color/tip amount area color*/
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    /*icons color*/
+    --darkGrayishCyan: hsl(186, 14%, 43%);
+    /*body background color*/
+    --grayishCyan: hsl(184, 14%, 56%);
+    /*inputs (text areas) color*/
+    --lightGrayishCyan: hsl(185, 41%, 84%);
+    /*% buttons texts color*/
+    --veryLightGrayishCyan: hsl(189, 41%, 97%);
+    /*calculator background color*/
+    --white: hsl(0, 0%, 100%);
+
+
+}
+
+/*.space-mono-regular {
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.space-mono-bold {
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.space-mono-regular-italic {
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.space-mono-bold-italic {
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: italic;
+}*/
+
+body {
+    margin: 0;
+    background-color: var(--lightGrayishCyan);
+}
+
+#content {
+    height: 100vh;
+}
+
+#splitter-logo {
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    color: var(--veryDarkCyan);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    letter-spacing: 0.5rem;
+}
+
+#splitter-logo p {
+    margin: 8px 0;
+}
+
+#logo-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+}
+
+#calculator-container {
+    width: 100%;
+    height: 80%;
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+}
+
+#calculator {
+    background-color: var(--white);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.text-area {
+    width: 100%;
+    height: 100%;
+    background-color: var(--veryLightGrayishCyan);
+    border: none;
+    color: var(--darkGrayishCyan);
+    text-align: right;
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+}
+
+#total-amount-text-area {
+    background-color: var(--veryLightGrayishCyan);
+    width: 80%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#bill-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bill-section-text {
+    text-align: left;
+    width: 80%;
+}
+
+.text-area-icon {
+    width: 5%;
+    position: absolute;
+    left: 0px;
+    margin-left: 4px;
+}
+
+.input-heading {
+    color: var(--veryDarkCyan);
+}
