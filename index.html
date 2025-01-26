@@ -11,92 +11,94 @@
     <title>Tip Calculator App by Konrad</title>
 </head>
 <body>
-    <div id="content">
-       <div id="logo-container">
-            <div id="splitter-logo">
-                <img src="assets/logo.svg" alt="">
+    <div id="content-container">
+        <div id="content">
+            <div id="logo-container">
+                <div id="splitter-logo">
+                    <img src="assets/logo.svg" alt="">
+                </div>
             </div>
-        </div>
-        <div id="calculator-container">
-            <div id="calculator">
-                <div>
-                    <div>
-                        <div class="input-section" id="bill-section">
-                            <label for="bill" class="input-label" id="bill-section-text">Bill</label>
-                            <div class="text-area-container">
-                                <div class="text-area-icon">
-                                    <img src="assets/icon-dollar.svg" alt="">
-                                </div>
-                                <textarea class="text-area" name="bill" id="bill" placeholder="0"></textarea>
-                            </div>
-                        </div>
-                        <div class="input-section">
-                            <div id="tip-section-content">
-                                <div  class="input-label">
-                                    <label for="custom-tip">Select Tip %</label>
-                                </div>
-                                <div id="grid-container">
-                                    <div id="tip-grid">
-                                        <div class="tip-button">
-                                            <button>5%</button>
-                                        </div>
-                                        <div class="tip-button">
-                                            <button>10%</button>
-                                        </div>
-                                        <div class="tip-button">
-                                            <button>15%</button>
-                                        </div>
-                                        <div class="tip-button">
-                                            <button>25%</button>
-                                        </div>
-                                        <div class="tip-button">
-                                            <button>50%</button>
-                                        </div>
-                                        <div class="tip-button">
-                                            <textarea name="custom-tip" id="custom-tip" placeholder="Custom"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="input-section" id="number-of-person-section">
-                                <label for="number-of-people" class="input-label" id="bill-section-text">Number of People</label>
+            <div id="calculator-container">
+                <div id="calculator">
+                    <div id="calculator-content">
+                        <div id="inputs-container">
+                            <div class="input-section" id="bill-section">
+                                <label for="bill" class="input-label" id="bill-section-text">Bill</label>
                                 <div class="text-area-container">
                                     <div class="text-area-icon">
-                                        <img src="assets/icon-person.svg" alt="">
+                                        <img src="assets/icon-dollar.svg" alt="">
                                     </div>
                                     <textarea class="text-area" name="bill" id="bill" placeholder="0"></textarea>
                                 </div>
                             </div>
+                            <div class="input-section">
+                                <div id="tip-section-content">
+                                    <div  class="input-label">
+                                        <label for="custom-tip">Select Tip %</label>
+                                    </div>
+                                    <div id="grid-container">
+                                        <div id="tip-grid">
+                                            <div class="tip-button">
+                                                <button>5%</button>
+                                            </div>
+                                            <div class="tip-button">
+                                                <button>10%</button>
+                                            </div>
+                                            <div class="tip-button">
+                                                <button>15%</button>
+                                            </div>
+                                            <div class="tip-button">
+                                                <button>25%</button>
+                                            </div>
+                                            <div class="tip-button">
+                                                <button>50%</button>
+                                            </div>
+                                            <div class="tip-button">
+                                                <textarea name="custom-tip" id="custom-tip" placeholder="Custom"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="input-section" id="number-of-person-section">
+                                    <label for="number-of-people" class="input-label" id="bill-section-text">Number of People</label>
+                                    <div class="text-area-container">
+                                        <div class="text-area-icon">
+                                            <img src="assets/icon-person.svg" alt="">
+                                        </div>
+                                        <textarea class="text-area" name="number-of-people" id="number-of-people" placeholder="0"></textarea>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div id="result-container">
-                        <div id="result-content">
-                            <div class="result">
-                                <div class="result-text" id="tip-amount-result">
-                                    <div class="result-label-container">
-                                        <p class="result-label">Tip Amount</p>
-                                        <p class="per-person-label">/ person</p>
-                                    </div>
-                                    <div class="result-value-container">
-                                        <p class="result-value">0</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="result">
-                                <div class="result-text">
-                                    <div class="result-label-container">
-                                        <p class="result-label">Total</p>
-                                        <p class="per-person-label">/ person</p>
-                                    </div>
-                                    <div class="result-value-container">
-                                        <p class="result-value">0</p>
+                        <div id="result-container">
+                            <div id="result-content">
+                                <div class="result">
+                                    <div class="result-text" id="tip-amount-result">
+                                        <div class="result-label-container">
+                                            <p class="result-label">Tip Amount</p>
+                                            <p class="per-person-label">/ person</p>
+                                        </div>
+                                        <div class="result-value-container">
+                                            <p class="result-value">0</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="reset-container">
-                                <button id="reset">RESET</button>
+                                <div class="result">
+                                    <div class="result-text">
+                                        <div class="result-label-container">
+                                            <p class="result-label">Total</p>
+                                            <p class="per-person-label">/ person</p>
+                                        </div>
+                                        <div class="result-value-container">
+                                            <p class="result-value">0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="reset-container">
+                                    <button type="reset" id="reset">RESET</button>
+                                </div>
                             </div>
                         </div>
                     </div>
