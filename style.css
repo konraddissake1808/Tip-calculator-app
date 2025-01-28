@@ -15,29 +15,16 @@
     --white: hsl(0, 0%, 100%);
 }
 
-/*.space-mono-regular {
-    font-family: "Space Mono", serif;
-    font-weight: 400;
-    font-style: normal;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-.space-mono-bold {
-    font-family: "Space Mono", serif;
-    font-weight: 700;
-    font-style: normal;
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }
-
-.space-mono-regular-italic {
-    font-family: "Space Mono", serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.space-mono-bold-italic {
-    font-family: "Space Mono", serif;
-    font-weight: 700;
-    font-style: italic;
-}*/
 
 body {
     background-color: var(--lightGrayishCyan);
@@ -54,7 +41,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 40px 0;
+    margin-bottom: 40px;
+    padding-top: 40px;
 }
 
 #calculator-container {
@@ -82,6 +70,30 @@ body {
     font-size: 24px;
     padding-right: 12px;
     border-radius: 4px;
+    resize: none;
+}
+
+.text-area:focus {
+    outline: solid 2px var(--strongCyan);
+}
+
+.text-area-error {
+    width: 100%;
+    height: 36px;
+    background-color: var(--veryLightGrayishCyan);
+    border: none;
+    color: var(--veryDarkCyan);
+    text-align: right;
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-size: 24px;
+    padding-right: 12px;
+    border-radius: 4px;
+    resize: none;
+}
+
+.text-area-error:focus {
+    outline: solid 2px red;
 }
 
 .text-area-container {
@@ -179,19 +191,29 @@ body {
     border-radius: 4px;
 }
 
+.tip-button button:hover {
+    background-color: var(--lightGrayishCyan);
+    color: var(--veryDarkCyan);
+    transition: 100ms;
+}
+
 #custom-tip {
     width: 100%;
     height: 34px;
-    padding: 0;
+    padding: 3px 0 3px 0;
     font-family: "Space Mono", serif;
     font-weight: 700;
     font-size: 20px;
     text-align: center;
-    padding-top: 6px;
     border: none;
     background-color: var(--veryLightGrayishCyan);
     border-radius: 4px;
     color: var(--veryDarkCyan);
+    resize: none;
+}
+
+#custom-tip:focus {
+    outline: solid 2px var(--strongCyan);
 }
 
 #result-container {
@@ -228,6 +250,19 @@ body {
     margin-top: 12px;
 }
 
+#reset:disabled {
+    background-color: var(--darkGrayishCyan);
+}
+
+#reset:disabled:hover {
+    background-color: var(--darkGrayishCyan);
+}
+
+#reset:hover {
+    background-color: var(--lightGrayishCyan);
+    transition: 100ms;
+}
+
 #reset-container {
     width: 100%;
     display: flex;
@@ -259,14 +294,14 @@ body {
 }
 
 .result-label-container {
-    width: 50%;
+    width: 39%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .result-value-container {
-    width: 50%;
+    width: 61%;
 }
 
 #tip-amount-result {
@@ -282,6 +317,19 @@ body {
     text-align: center;
     color: var(--grayishCyan);
     background-color: var(--white);
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    height: 48px;
+    padding-top: 48px;
+}
+
+#active {
+    background-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+}
+
+#err-msg {
+    color: red;
 }
 
 @media (width > 767px) {
@@ -292,14 +340,6 @@ body {
         flex-direction: column;
         height: 100vh;
     }
-    /*#content {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }*/
     #calculator-container {
         width: 756px;
         font-family: "Space Mono", serif;
@@ -311,7 +351,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 0 64px 0;
+        margin: 0 0 40px 0;
     }
      #calculator {
         background-color: var(--white);
@@ -377,5 +417,15 @@ body {
         color: var(--grayishCyan);
         padding: 0;
         background-color: var(--lightGrayishCyan);
+        margin-top: 40px;
+    }
+    #reset-container {
+        margin-top: 100px;
+    }
+    #bill-section-text {
+        width: 60%;
+    }
+    #err-msg {
+        color: red;
     }
 }

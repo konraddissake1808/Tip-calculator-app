@@ -28,7 +28,7 @@
                                     <div class="text-area-icon">
                                         <img src="assets/icon-dollar.svg" alt="">
                                     </div>
-                                    <textarea class="text-area" name="bill" id="bill" placeholder="0"></textarea>
+                                    <input type="number" class="text-area" name="bill" id="bill" placeholder="0">
                                 </div>
                             </div>
                             <div class="input-section">
@@ -39,22 +39,22 @@
                                     <div id="grid-container">
                                         <div id="tip-grid">
                                             <div class="tip-button">
-                                                <button>5%</button>
+                                                <button onclick={fivePercent()} id="five-percent-button">5%</button>
                                             </div>
                                             <div class="tip-button">
-                                                <button>10%</button>
+                                                <button onclick={tenPercent()} id="ten-percent-button">10%</button>
                                             </div>
                                             <div class="tip-button">
-                                                <button>15%</button>
+                                                <button onclick={fifteenPercent()} id="fifteen-percent-button">15%</button>
                                             </div>
                                             <div class="tip-button">
-                                                <button>25%</button>
+                                                <button onclick={twentyFivePercent()} id="twenty-five-percent-button">25%</button>
                                             </div>
                                             <div class="tip-button">
-                                                <button>50%</button>
+                                                <button onclick={fiftyPercent()} id="fifty-percent-button">50%</button>
                                             </div>
                                             <div class="tip-button">
-                                                <textarea name="custom-tip" id="custom-tip" placeholder="Custom"></textarea>
+                                                <input type="number" name="custom-tip" id="custom-tip" placeholder="Custom" min="0" max="100">
                                             </div>
                                         </div>
                                     </div>
@@ -62,12 +62,15 @@
                             </div>
                             <div>
                                 <div class="input-section" id="number-of-person-section">
-                                    <label for="number-of-people" class="input-label" id="bill-section-text">Number of People</label>
+                                    <div style="display: flex; width: 80%; justify-content: space-between;">
+                                        <label for="number-of-people" class="input-label" id="bill-section-text">Number of People</label>
+                                        <div id="err-msg"></div>
+                                    </div>
                                     <div class="text-area-container">
                                         <div class="text-area-icon">
                                             <img src="assets/icon-person.svg" alt="">
                                         </div>
-                                        <textarea class="text-area" name="number-of-people" id="number-of-people" placeholder="0"></textarea>
+                                        <input type="number" class="text-area" name="number-of-people" id="number-of-people" placeholder="0" min="1">
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +84,7 @@
                                             <p class="per-person-label">/ person</p>
                                         </div>
                                         <div class="result-value-container">
-                                            <p class="result-value">0</p>
+                                            <p class="result-value">$ <span id="tipPerPerson"></span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -92,18 +95,19 @@
                                             <p class="per-person-label">/ person</p>
                                         </div>
                                         <div class="result-value-container">
-                                            <p class="result-value">0</p>
+                                            <p class="result-value">$ <span id="totalPerPerson"></span></p>
                                         </div>
                                     </div>
                                 </div>
                                 <div id="reset-container">
-                                    <button type="reset" id="reset">RESET</button>
+                                    <button onclick={reset()} type="reset" id="reset">RESET</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div id="copyright">Made By Konrad Dissake</div>
         </div>
     </div>
     <script src="script.js"></script>
